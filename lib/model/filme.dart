@@ -7,7 +7,7 @@ class Filme{
   String duracao;
   double pontuacao;
   String descricao;
-  int ano;
+  String ano;
 
   Filme(this.id, this.urlImagem, this.titulo, this.genero, this.faixa_etaria, this.duracao, this.pontuacao, this.descricao, this.ano);
 
