@@ -37,7 +37,48 @@ class _ListaDeFilmesState extends State<ListaDeFilmes> {
         });
       },)],
       ),
-      body: Container(),
+      body: ListView.builder(
+        itemCount: 3,
+          itemBuilder: (context,index){
+            return _build(index);
+      }),
+    );
+  }
+  Dismissible _build(index){
+    return Dismissible(
+      background: Container(
+        color: Colors.red,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Icon(Icons.delete, color: Colors.white,),
+          ],
+        ),
+      ),
+      direction: DismissDirection.endToStart,
+      key: ValueKey("aaa"),
+      child: Container(
+        child: Card(
+          child: Row(
+            children: [
+              SizedBox(
+                height: 160,
+                width: 160,
+                child: Image.network("https://br.web.img3.acsta.net/pictures/19/12/16/15/00/5548914.jpg", fit: BoxFit.fitHeight,),
+              ),
+              Container(
+                child: Column(
+                  children: [
+                    Title(color: Colors.black, child: Text("Top Gun Maverick")),
+                    Text("Ação, Aventura e Drama"),
+                    Text("2h 11min")
+                  ],
+                ),
+              )
+            ],
+          ),
+        ),
+      )
     );
   }
 }
