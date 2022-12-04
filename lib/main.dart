@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'view/ListaDeFilmes.dart';
 
 void main() {
   runApp(MyApp());
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      //Caminho para a tela principal
+      home: ListaDeFilmes(),
     );
   }
 }
